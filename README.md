@@ -12,7 +12,7 @@ Clone the repo and run the command below to install and run the front-end
 yarn && yarn start
 ```
 
-To run all tests use the command below
+Each component has it's own test file, to run all tests use the command below
 
 ```
 yarn test
