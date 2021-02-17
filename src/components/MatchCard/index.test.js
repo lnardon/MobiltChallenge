@@ -1,8 +1,10 @@
 import { shallow } from "enzyme";
-import App from "./App";
+import { findByAttr } from "../../testUtils";
+import MatchCard from "./index";
 
-test("renders APP component without crashing", () => {
-  const wrapper = shallow(<App />);
+test("renders component without crashing", () => {
+  const wrapper = shallow(<MatchCard />);
+  console.log(wrapper);
   expect(wrapper.length).toBe(1);
 });
 
