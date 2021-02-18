@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  margin: 2rem 0rem;
+}
+
+.title {
+  width: 100%;
+  border-bottom: 1px solid #cfcfcf;
+  cursor: pointer;
+  padding: 1rem;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.filterOption {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #cfcfcf;
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.optionLabel {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.optionMatches {
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: #131313;
+  padding: 0.125rem 0.5rem;
+  color: #fafafa;
+}
