@@ -4,6 +4,7 @@ import useData from "./hooks/useData";
 import styles from "./App.module.scss";
 import MatchCard from "./components/MatchCard";
 import Filter from "./components/Filter";
+import ball from "./assets/ball.svg";
 
 function App() {
   const data = useData();
@@ -70,7 +71,12 @@ function App() {
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
-        <h1 className={styles.title}>Live Score Website</h1>
+        <div className={styles.title}>
+          <img src={ball} alt="logo" className={styles.logo} />
+          <h1 style={{ fontSize: "3rem" }}>Live Score</h1>
+          <img src={ball} alt="logo" className={styles.logo} />
+        </div>
+
         <Filter setFilter={applyFilter} info={gamesAmount} />
         <div className={styles.matchesList}>
           {games.map((game) => (
