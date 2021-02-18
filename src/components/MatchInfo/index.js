@@ -5,7 +5,11 @@ import styles from "./styles.module.scss";
 function MatchInfo({ homeTeam, awayTeam, status }) {
   return (
     <div className={styles.container}>
-      <h1>{homeTeam}</h1>
+      <div className={styles.content}>{homeTeam}</div>
+      <div className={styles.content}>
+        <div>{status}</div>
+      </div>
+      <div className={styles.content}>{awayTeam}</div>
     </div>
   );
 }
