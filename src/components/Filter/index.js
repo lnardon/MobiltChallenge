@@ -44,7 +44,9 @@ function Filter({
           }}
         >
           <h2 className={styles.optionLabel}>All</h2>
-          <h3 className={styles.optionMatches}>{info.all}</h3>
+          <h3 data-test="componentAll" className={styles.optionMatches}>
+            {info.all}
+          </h3>
         </div>
         <div
           className={styles.filterOption}
@@ -54,7 +56,9 @@ function Filter({
           }}
         >
           <h2 className={styles.optionLabel}>Result</h2>
-          <h3 className={styles.optionMatches}>{info.ended}</h3>
+          <h3 data-test="componentFinished" className={styles.optionMatches}>
+            {info.ended}
+          </h3>
         </div>
         <div
           className={styles.filterOption}
@@ -64,7 +68,9 @@ function Filter({
           }}
         >
           <h2 className={styles.optionLabel}>Live</h2>
-          <h3 className={styles.optionMatches}>{info.live}</h3>
+          <h3 data-test="componentLive" className={styles.optionMatches}>
+            {info.live}
+          </h3>
         </div>
         <div
           className={styles.filterOption}
@@ -74,7 +80,9 @@ function Filter({
           }}
         >
           <h2 className={styles.optionLabel}>Upcoming</h2>
-          <h3 className={styles.optionMatches}>{info.upcoming}</h3>
+          <h3 data-test="componentUpcoming" className={styles.optionMatches}>
+            {info.upcoming}
+          </h3>
         </div>
       </div>
     </div>
