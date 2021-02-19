@@ -24,6 +24,8 @@ function LiveStatus({ status, date }) {
             ? styles.ended
             : status === "Canceled"
             ? styles.canceled
+            : status === "-"
+            ? styles.date
             : styles.live
         }
       >

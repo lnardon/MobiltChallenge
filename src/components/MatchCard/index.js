@@ -6,13 +6,13 @@ function MatchCard({ info }) {
   const handleData = (data) => {
     switch (data.status.type) {
       case "finished":
-        return { indication: "FT", bar: 0 };
+        return { indication: "FT", bar: "0" };
       case "notstarted":
         return { indication: "", bar: true, date: data.date };
       case "inprogress":
         return {
           indication: data.liveStatus,
-          bar: "120",
+          bar: data.liveStatus,
           liveStatus: data.liveStatus,
         };
       default:

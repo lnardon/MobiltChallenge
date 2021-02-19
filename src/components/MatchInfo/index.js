@@ -3,15 +3,15 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 function MatchInfo({ homeTeam, awayTeam, status }) {
-  const getMatchTime = () => {
-    if (typeof status.bar === "boolean") {
-      return "125";
+  const getMatchProgress = () => {
+    if (typeof status.bar === "boolean" || typeof status.bar === "undefined") {
+      return 126;
+    } else if (status.bar === "HT" || status.bar === "45+") {
+      return 63;
+    } else if (status.bar === "0") {
+      return 0;
     } else {
-      if (typeof status.bar === "string") {
-        return "-90";
-      } else {
-        return "0";
-      }
+      return ((status.bar - 90) / (0 - 90)) * (126 - 0) + 0;
     }
   };
 
@@ -26,15 +26,20 @@ function MatchInfo({ homeTeam, awayTeam, status }) {
             cx="25"
             cy="25"
             r="20"
-            stroke={
-              typeof status.bar === "string" || typeof status.bar === "number"
-                ? "#07E33C"
-                : "#eee"
-            }
+            stroke="#eee"
             strokeWidth="1"
             fill="transparent"
-            strokeDasharray="251"
-            strokeDashoffset={getMatchTime()}
+            strokeDasharray="0"
+          />
+          <circle
+            cx="25"
+            cy="25"
+            r="20"
+            stroke={"#07e33c"}
+            strokeWidth="2"
+            fill="transparent"
+            strokeDasharray="126"
+            strokeDashoffset={getMatchProgress()}
           />
         </svg>
         <h5 className={styles.matchTime}>{status.indication}</h5>
