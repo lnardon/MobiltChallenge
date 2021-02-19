@@ -22,7 +22,6 @@ function App() {
   }, []);
 
   const applyFilter = (type) => {
-    console.log(data);
     switch (type) {
       case "all":
         setGames(data);
@@ -30,27 +29,21 @@ function App() {
       case "finished":
         setGames(
           data.filter((game) => {
-            if (game.status.type === "finished") {
-              return game;
-            }
+            return game.status.type === "finished";
           })
         );
         break;
       case "live":
         setGames(
           data.filter((game) => {
-            if (game.status.type === "inprogress") {
-              return game;
-            }
+            return game.status.type === "inprogress";
           })
         );
         break;
       case "upcoming":
         setGames(
           data.filter((game) => {
-            if (game.status.type === "notstarted") {
-              return game;
-            }
+            return game.status.type === "notstarted";
           })
         );
         break;
@@ -61,9 +54,7 @@ function App() {
 
   const countVideo = (type) => {
     let aux = data.filter((game) => {
-      if (game.status.type === type) {
-        return game;
-      }
+      return game.status.type === type;
     });
     return aux.length;
   };
