@@ -1,7 +1,7 @@
 # Mobilt Challenge
 
-<p align="center">
-  <img src="./demo.gif">
+<p align="center" style="width:'150px'">
+  <img src="./demo.gif" style="height:'150px'">
 </p>
 
 ## Install
