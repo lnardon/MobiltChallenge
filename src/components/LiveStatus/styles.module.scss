@@ -1,14 +1,10 @@
-.container {
-  margin-bottom: 0.65rem;
-}
-
 .container > h1 {
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .ended {
-  color: green;
+  color: #07e33c;
 }
 
 .live {
@@ -16,5 +12,5 @@
 }
 
 .canceled {
-  color: red;
+  color: #fa1d00;
 }

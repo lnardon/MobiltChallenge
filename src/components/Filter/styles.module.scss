@@ -10,10 +10,12 @@
   width: 100%;
   padding: 1rem;
   border-bottom: 1px solid #cfcfcf;
+  border-radius: 0.125rem;
   cursor: pointer;
   &:hover {
-    background-color: #eee;
+    background-color: rgb(226, 226, 226);
   }
+  overflow: hidden;
 }
 
 .title {
@@ -28,9 +30,10 @@
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid #cfcfcf;
+  border-radius: 0.125rem;
   cursor: pointer;
   &:hover {
-    background-color: #eee;
+    background-color: rgb(226, 226, 226);
   }
 }
 
@@ -77,12 +80,11 @@
 @keyframes openAnimation {
   from {
     opacity: 0;
-    height: 0;
-    overflow: hidden;
+    height: 0%;
   }
   to {
     opacity: 1;
-    height: auto;
+    height: 100%;
   }
 }
 
