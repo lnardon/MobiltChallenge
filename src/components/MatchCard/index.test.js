@@ -45,7 +45,6 @@ const baseInfo = {
 
 test("renders component without crashing", () => {
   const wrapper = shallow(<MatchCard info={baseInfo} />);
-  console.log(wrapper);
   expect(wrapper.length).toBe(1);
 });
 
