@@ -1,5 +1,7 @@
 # Mobilt Challenge
 
+The complete challenge description is available on the `test.pdf` file.
+
 <p align="center" style="width:'150px'">
   <img src="./demo.gif" style="height:'150px'">
 </p>
